@@ -1,6 +1,6 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.2.6'
+	id 'org.springframework.boot' version '3.3.0'
 	id 'io.spring.dependency-management' version '1.1.5'
 }
 
@@ -24,7 +24,14 @@ repositories {
 }
 
 dependencies {
+	// JAVACORD
 	implementation 'org.javacord:javacord:3.8.0'
+    // JDA
+    implementation 'net.dv8tion:JDA:5.0.0-beta.2'
+    // Unirest 라이브러리
+    implementation 'com.konghq:unirest-java:4.0.0'
+    
+    
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -32,7 +39,6 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-    implementation 'net.dv8tion:JDA:5.0.0-beta.2'
 	
 	runtimeOnly 'org.apache.logging.log4j:log4j-core:2.17.0'
 }
